@@ -1,0 +1,42 @@
+{
+  "name": "grunt-template-stripping",
+  "description": "stripping the template like <script id=\"xxx\" tepe=\"text/plain\">...</script> from the html file to js file",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doomking/grunt/grunt-template-stripping",
+  "author": {
+    "name": "doomking",
+    "email": "xghan.cn@gmail.com",
+    "url": "https://github.com/Doomking"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/doomking/grunt/grunt-template-stripping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doomking/grunt/grunt-template-stripping/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/doomking/grunt/grunt-template-stripping/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
