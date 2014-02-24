@@ -27,9 +27,17 @@ grunt.initConfig({
   template_stripping: {
     options: {
       // Task-specific options go here.
+		type:'text/html',
+		replace:'{%HtmlTemplates%}'
     },
     your_target: {
       // Target-specific file lists and/or options go here.
+		files:{
+				srcHtml:'./index.htm',
+				srcJs:'./ky.template.js',
+				destHtml:'./dist/index.htm',
+				destJs:'./dist/ky.template.js'
+			}
     },
   },
 });
@@ -48,6 +56,24 @@ Type: `String`
 Default value: `'.'`
 
 A string value that is used to do something else with whatever else.
+#### options.type
+Type: `String`
+Default value: `'text/html'`
+
+A string value that is used to judge the template script type.
+#### options.replace
+Type: `String`
+Default value: `'{%HtmlTemplates%}'`
+
+A string value that is used to replaced by the template json string which is in the input js file .
+#### options.flag
+Type: `String`
+Default value: `''`
+
+A string value that is used to flag some attribute for the template script .
+
+
+
 
 ### Usage Examples
 
@@ -57,10 +83,18 @@ In this example, the default options are used to do something with whatever. So 
 ```js
 grunt.initConfig({
   template_stripping: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    	options:{
+				type:'text/html',
+				replace:'{%HtmlTemplates%}'
+			},
+			test:{
+				files:{
+					srcHtml:'./index.htm',
+					srcJs:'./ky.template.js',
+					destHtml:'./dist/index.htm',
+					destJs:'./dist/ky.template.js'
+				}
+			}
   },
 });
 ```
@@ -72,11 +106,15 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   template_stripping: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+     type:'text/html',
+	 replace:'{%HtmlTemplates%}',
+	 flag:'controller-x'//for x controller
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+		srcHtml:'./index.htm',
+		srcJs:'./ky.template.js',
+		destHtml:'./dist/index.htm',
+		destJs:'./dist/ky.template.js'
     },
   },
 });
@@ -87,3 +125,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 _(Nothing yet)_
+
+##Thanks
+this idea and code is from http://www.alloyteam.com/2012/05/pick-up-templates-speed-up/,i just wrapper it to the grunt plugin,so thanks the author.
