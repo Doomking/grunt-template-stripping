@@ -45,17 +45,6 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 #### options.type
 Type: `String`
 Default value: `'text/html'`
@@ -127,4 +116,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ##Thanks
-this idea and code is from http://www.alloyteam.com/2012/05/pick-up-templates-speed-up/,i just wrapper it to the grunt plugin,so thanks the author.
+this idea and code is from http://www.alloyteam.com/2012/05/pick-up-templates-speed-up/  ,I just wrapper it to the grunt plugin,so thanks the author.
